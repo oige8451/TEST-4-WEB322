@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <%- include('partials/navbar') %>
+  <h1>Products</h1>
+  <table>
+      <tr>
+        <th>PID</th>
+        <th>Name</th>
+        <th>Price</th>
+      </tr>
+    <tbody>
+      <% products.forEach(product => { %>
+        <tr>
+          <td><%= product.PID %></td>
+          <td><%= product.name %></td>
+          <td>$<%= product.price %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>
